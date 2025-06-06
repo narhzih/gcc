@@ -13,13 +13,32 @@
     <div class="min-h-screen">
       <section class="py-16 px-4 max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+          <h1 class="text-4xl font-semibold text-center mb-4" style="color: #161723; line-height: 120%; letter-spacing: 0.25px;">
             What makes us different<br>
             makes them stronger
           </h1>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+        <div class="flex justify-center mb-12 lg:hidden">
+          <div class="relative">
+            <div class="w-80 h-80 rounded-full overflow-hidden shadow-2xl relative" id="mobile-slider">
+              <img src="/images/hero1.png" 
+                   alt="Dog food bowl" 
+                   class="w-full h-full object-cover absolute top-0 left-0">
+              <div class="absolute top-0 left-0 w-full h-full overflow-hidden" style="clip-path: inset(0 50% 0 0);" id="mobile-overlay">
+                <img src="/images/hero2.png" 
+                   alt="Dog food bowl" 
+                   class="w-full h-full object-cover">
+              </div>
+              <div class="absolute top-0 bottom-0 w-0.5 left-1/2 transform -translate-x-1/2" style="background: #EE6F4B; border: 2px solid #EE6F4B;" id="mobile-divider"></div>
+              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg cursor-pointer flex items-center justify-center" id="mobile-handle">
+                <img src="/icons/icon_dragger.svg" alt="Drag" class="w-5 h-5" style="color: #EE6F4B;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:grid lg:grid-cols-4 gap-8 items-center">
           <div class="space-y-8">
             <div class="flex items-start space-x-4">
               <img src="/icons/icon_realfood.svg" alt="Real Food" class="w-12 h-12 flex-shrink-0">
@@ -38,12 +57,21 @@
             </div>
           </div>
 
-          <div class="lg:col-span-2 flex justify-center">
+          <div class="col-span-2 flex justify-center">
             <div class="relative">
-              <div class="w-80 h-80 rounded-full overflow-hidden shadow-2xl">
-                <img src="/images/hero1.svg" 
+              <div class="w-80 h-80 rounded-full overflow-hidden shadow-2xl relative" id="desktop-slider">
+                <img src="/images/hero1.png" 
                      alt="Dog food bowl" 
-                     class="w-full h-full object-cover">
+                     class="w-full h-full object-cover absolute top-0 left-0">
+                <div class="absolute top-0 left-0 w-full h-full overflow-hidden" style="clip-path: inset(0 50% 0 0);" id="desktop-overlay">
+                  <img src="/images/hero2.png" 
+                       alt="Dog food bowl" 
+                       class="w-full h-full object-cover">
+                </div>
+                <div class="absolute top-0 bottom-0 w-0.5 left-1/2 transform -translate-x-1/2" style="background: #EE6F4B; border: 2px solid #EE6F4B;" id="desktop-divider"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg cursor-pointer flex items-center justify-center" id="desktop-handle">
+                  <img src="/icons/icon_dragger.svg" alt="Drag" class="w-5 h-5" style="color: #EE6F4B;">
+                </div>
               </div>
             </div>
           </div>
@@ -67,24 +95,56 @@
           </div>
         </div>
 
+        <div class="lg:hidden space-y-8">
+          <div class="flex items-start space-x-4">
+            <img src="/icons/icon_realfood.svg" alt="Real Food" class="w-12 h-12 flex-shrink-0">
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-2">Real Food</h3>
+              <p class="text-gray-600 text-sm">Wholesome recipes for dogs with real meat and veggies.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-4">
+            <img src="/icons/icon_premium_ingredient.svg" alt="Premium Ingredient" class="w-12 h-12 flex-shrink-0">
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-2">Premium Ingredient</h3>
+              <p class="text-gray-600 text-sm">Elevating pet care with unmatched safety and quality.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <img src="/icons/icon_made_fresh.svg" alt="Made Fresh" class="w-12 h-12 flex-shrink-0">
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-2">Made Fresh</h3>
+              <p class="text-gray-600 text-sm">We prioritize maintaining the integrity of whole foods and nutrition.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-4">
+            <img src="/icons/icon_vet.svg" alt="Vet Developed" class="w-12 h-12 flex-shrink-0">
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-2">Vet Developed</h3>
+              <p class="text-gray-600 text-sm">We raise the bar for dog nutrition, surpassing industry expectations.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="text-center mt-16">
-          <button class="bg-coral-500 hover:bg-red-600 text-white font-semibold px-8 py-4 rounded-lg text-lg mb-8 transition-colors">
+          <button class="text-white font-semibold mb-8" style="width: 462px; height: 48px; padding: 12px 40px; border-radius: 6px; background: #EE6F4B;">
             Get your dog's healthy meal today!
           </button>
           
           <div class="flex items-center justify-center space-x-4 text-sm text-gray-600">
             <div class="flex items-center">
-              <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
+              <img src="/icons/icon_shield.svg" alt="Shield" class="w-4 h-4 mr-2">
               30-day money back guarantee
             </div>
             <div class="flex items-center space-x-2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay" class="h-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Googlelogo.svg" alt="Google Pay" class="h-4">
+              <img src="/icons/icon_paypal.svg" alt="PayPal" class="h-4">
+              <img src="/icons/icon_visa.svg" alt="Visa" class="h-4">
+              <img src="/icons/icon_mastercard.svg" alt="Mastercard" class="h-4">
+              <img src="/icons/icon_applepay.svg" alt="Apple Pay" class="h-4">
+              <img src="/icons/icon_googlepay.svg" alt="Google Pay" class="h-4">
             </div>
           </div>
         </div>
@@ -121,7 +181,7 @@
               </div>
             </div>
             
-            <button class="bg-coral-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+            <button class="text-white font-semibold w-full" style="height: 48px; padding: 12px 40px; border-radius: 6px; background: #EE6F4B;">
               Give your furry friend the gift of wholesome nutrition
             </button>
           </div>
@@ -129,35 +189,41 @@
           <div class="flex justify-center">
             <img src="/images/banner_img1.svg" 
                  alt="Happy dog with food package" 
-                 class="rounded-lg shadow-lg max-w-md w-full">
+                 class="rounded-lg shadow-lg max-w-md w-full md:h-full md:object-cover">
           </div>
         </div>
       </section>
 
       <section class="py-16 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto space-y-16">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="/images/section_img1.svg" 
-                   alt="Dogs eating healthy food" 
-                   class="rounded-lg shadow-lg w-full">
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          <div class="md:grid md:grid-cols-2 gap-12 items-center">
+            <div class="mb-8 md:mb-0">
+              <h3 class="text-4xl font-semibold mb-4 md:hidden" style="color: #161723; line-height: 120%; letter-spacing: 0.25px;">
                 Improve overall gastrointestinal health for better nutrient absorption
               </h3>
-              <p class="text-gray-600">
+              <p class="text-base mb-6 md:hidden" style="color: #424153; line-height: 150%; letter-spacing: 0.5px;">
+                Through rigorous scientific studies and consultations with veterinarians, we have created a breakthrough formula. Internal lab combined with research shows that our new patent supplement have seen significant improvements in their dogs' health and understanding of an ancient diet over time.
+              </p>
+              <img src="/images/section_img1.svg" 
+                   alt="Dogs eating healthy food" 
+                   class="rounded-lg shadow-lg w-full md:order-first">
+            </div>
+            <div class="hidden md:block">
+              <h3 class="text-4xl font-semibold mb-4" style="color: #161723; line-height: 120%; letter-spacing: 0.25px;">
+                Improve overall gastrointestinal health for better nutrient absorption
+              </h3>
+              <p class="text-base" style="color: #424153; line-height: 150%; letter-spacing: 0.5px;">
                 Through rigorous scientific studies and consultations with veterinarians, we have created a breakthrough formula. Internal lab combined with research shows that our new patent supplement have seen significant improvements in their dogs' health and understanding of an ancient diet over time.
               </p>
             </div>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          <div class="md:grid md:grid-cols-2 gap-12 items-center">
+            <div class="mb-8 md:mb-0">
+              <h3 class="text-4xl font-semibold mb-4" style="color: #161723; line-height: 120%; letter-spacing: 0.25px;">
                 Probiotics nourish the beneficial gut bacteria, supporting digestive health
               </h3>
-              <p class="text-gray-600">
+              <p class="text-base mb-6 md:mb-0" style="color: #424153; line-height: 150%; letter-spacing: 0.5px;">
                 Our food features clinically studied superfood ingredients and probiotics that help to maintain proper digestive balance. Comprehensive proprietary blend for the growth and maintenance of beneficial bacteria, ultimately supporting healthy digestion.
               </p>
             </div>
